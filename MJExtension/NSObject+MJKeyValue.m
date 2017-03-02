@@ -202,6 +202,7 @@ static NSNumberFormatter *numberFormatter_;
 
 + (instancetype)mj_objectWithKeyValues:(id)keyValues
 {
+    //将字典或者JSON传入
     return [self mj_objectWithKeyValues:keyValues context:nil];
 }
 

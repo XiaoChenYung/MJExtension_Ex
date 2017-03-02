@@ -148,6 +148,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 }
 
 #pragma mark - 公共方法
+// 该方法用运行时获取类变量  property
 + (NSMutableArray *)properties
 {
     NSMutableArray *cachedProperties = [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)];
@@ -158,6 +159,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         [self mj_enumerateClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             // 1.获得所有的成员变量
             unsigned int outCount = 0;
+            //class_copyPropertyList 获取类的变量列表
             objc_property_t *properties = class_copyPropertyList(c, &outCount);
             
             // 2.遍历每一个成员变量
@@ -178,7 +180,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)] = cachedProperties;
     }
     
-    return cachedProperties;
+    return cachedProperties.copy;
 }
 
 #pragma mark - 新值配置
