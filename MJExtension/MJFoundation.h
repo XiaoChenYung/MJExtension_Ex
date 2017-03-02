@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MJFoundation : NSObject
+// 判断该类是不是Foundation类的成员
 + (BOOL)isClassFromFoundation:(Class)c;
 @end

@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, MJPropertyKeyType) {
     MJPropertyKeyTypeDictionary = 0, // 字典的key
     MJPropertyKeyTypeArray // 数组的key
-} MJPropertyKeyType;
+} ;
 
 /**
  *  属性的key
