@@ -7,6 +7,7 @@
 //  广告模型
 
 #import <Foundation/Foundation.h>
+#import "MJExtension.h"
 
 @interface MJAd : NSObject
 /** 广告图片 */
