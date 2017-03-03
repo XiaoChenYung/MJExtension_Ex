@@ -25,6 +25,7 @@ typedef id (^MJReplacedKeyFromPropertyName121)(NSString *propertyName);
 /** 数组中需要转换的模型类 */
 typedef NSDictionary * (^MJObjectClassInArray)();
 /** 用于过滤字典中的值 */
+// 该block用来实现将后台返回的特定的值替换掉
 typedef id (^MJNewValueFromOldValue)(id object, id oldValue, MJProperty *property);
 
 /**

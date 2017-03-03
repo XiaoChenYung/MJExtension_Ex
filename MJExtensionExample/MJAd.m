@@ -9,5 +9,14 @@
 #import "MJAd.h"
 
 @implementation MJAd
+//类方法调用 ／／好神奇
++ (void)test:(id )data {
+    data = [data dataFormat];
+    
+}
+
+- (id)dataFormat {
+    return self;
+}
 
 @end

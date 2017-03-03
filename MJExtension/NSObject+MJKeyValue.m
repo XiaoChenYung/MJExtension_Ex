@@ -87,7 +87,7 @@ static NSNumberFormatter *numberFormatter_;
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
         @try {
             // 0.检测是否被忽略
-            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
+            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;//允许编码的数组不为空并且该变量不包含在里面
             if ([ignoredPropertyNames containsObject:property.name]) return;
             
             // 1.取出属性值
@@ -199,7 +199,7 @@ static NSNumberFormatter *numberFormatter_;
     }
     return self;
 }
-
+//最常用方法  //传入字典活着JSON
 + (instancetype)mj_objectWithKeyValues:(id)keyValues
 {
     //将字典或者JSON传入
