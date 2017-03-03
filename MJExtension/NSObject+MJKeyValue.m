@@ -311,7 +311,7 @@ static NSNumberFormatter *numberFormatter_;
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
         @try {
             // 0.检测是否被忽略
-            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
+            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return; //此处的 return是返回 block's void
             if ([ignoredPropertyNames containsObject:property.name]) return;
             if (keys.count && ![keys containsObject:property.name]) return;
             if ([ignoredKeys containsObject:property.name]) return;
