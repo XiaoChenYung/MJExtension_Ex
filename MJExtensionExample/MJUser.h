@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, Sex) {
     SexMale,
     SexFemale
-} Sex;
+};
 
 @interface MJUser : NSObject
 /** 名称 */

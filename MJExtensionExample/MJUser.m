@@ -10,9 +10,15 @@
 #import "MJExtension.h"
 
 @implementation MJUser
-//+ (NSArray *)mj_allowedPropertyNames
-//{
-//    return @[@"name", @"icon"];
-//}
+
++ (NSArray *)mj_allowedPropertyNames
+{
+    return @[@"name", @"icon"];
+}
+
++ (NSArray *)mj_ignoredPropertyNames {
+    return @[@"height",@"gay"];
+}
+
 MJExtensionLogAllProperties
 @end
