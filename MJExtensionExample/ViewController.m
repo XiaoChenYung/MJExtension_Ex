@@ -29,19 +29,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    unsigned int outCount = 0;
-    Ivar *ivars = class_copyIvarList([Person class], &outCount);
-    
-    // 遍历所有成员变量
-    for (int i = 0; i < outCount; i++) {
-        // 取出i位置对应的成员变量
-        Ivar ivar = ivars[i];
-        const char *name = ivar_getName(ivar);
-        const char *type = ivar_getTypeEncoding(ivar);
-        NSLog(@"成员变量名：%s 成员变量类型：%s",name,type);
-    }
-    // 注意释放内存！
-    free(ivars);
+//    unsigned int outCount = 0;
+//    Ivar *ivars = class_copyIvarList([Person class], &outCount);
+//    
+//    // 遍历所有成员变量
+//    for (int i = 0; i < outCount; i++) {
+//        // 取出i位置对应的成员变量
+//        Ivar ivar = ivars[i];
+//        const char *name = ivar_getName(ivar);
+//        const char *type = ivar_getTypeEncoding(ivar);
+//        NSLog(@"成员变量名：%s 成员变量类型：%s",name,type);
+//    }
+//    // 注意释放内存！
+//    free(ivars);
     
     // Do any additional setup after loading the view, typically from a nib.
 }
