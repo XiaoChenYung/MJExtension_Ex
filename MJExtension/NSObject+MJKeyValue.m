@@ -74,7 +74,7 @@ static NSNumberFormatter *numberFormatter_;
  */
 - (instancetype)mj_setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context
 {
-    // 获得JSON对象
+    // 获得JSON对象 其实是提取成字典的格式，不知道为什么用JSONObject这个名字...
     keyValues = [keyValues mj_JSONObject];
     
     MJExtensionAssertError([keyValues isKindOfClass:[NSDictionary class]], self, [self class], @"keyValues参数不是一个字典");

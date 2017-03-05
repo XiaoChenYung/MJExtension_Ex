@@ -119,6 +119,7 @@ void keyValues2object2()
                                    }
                            };
     
+//    NSString *jsonStr = [dict mj_JSONString];
     // 2.将字典转为Status模型
     MJStatus *status = [MJStatus mj_objectWithKeyValues:dict];
     
