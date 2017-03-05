@@ -149,6 +149,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 
 #pragma mark - 公共方法
 // 该方法用运行时获取类变量  property
+// 首先获取一个类最外层的property
 + (NSMutableArray *)properties
 {
     NSMutableArray *cachedProperties = [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)];
