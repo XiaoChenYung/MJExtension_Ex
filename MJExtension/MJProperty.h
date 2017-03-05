@@ -16,6 +16,7 @@
  */
 @interface MJProperty : NSObject
 /** 成员属性 */
+//结构体 assign 修饰
 @property (nonatomic, assign) objc_property_t property;
 /** 成员属性的名字 */
 @property (nonatomic, readonly) NSString *name;

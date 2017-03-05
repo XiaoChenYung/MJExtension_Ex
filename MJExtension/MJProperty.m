@@ -34,7 +34,7 @@
     MJProperty *propertyObj = objc_getAssociatedObject(self, property);
     if (propertyObj == nil) {
         propertyObj = [[self alloc] init];
-        propertyObj.property = property;
+        propertyObj.property = property;//回调用下面的set方法 运行时为类的
         objc_setAssociatedObject(self, property, propertyObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return propertyObj;
