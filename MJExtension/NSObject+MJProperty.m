@@ -55,6 +55,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 }
 
 #pragma mark - --私有方法--
+#warning mark -- 看这里
 + (id)propertyKey:(NSString *)propertyName
 {
     MJExtensionAssertParamNotNil2(propertyName, nil);
