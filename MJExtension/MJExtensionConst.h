@@ -66,6 +66,7 @@ MJExtensionAssert2((param) != nil, returnValue)
 
 /**
  *  类型（属性类型）
+ *  标示property的类型
  */
 extern NSString *const MJPropertyTypeInt;
 extern NSString *const MJPropertyTypeShort;
