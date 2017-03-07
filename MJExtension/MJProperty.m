@@ -125,6 +125,13 @@
 }
 
 /** 对应着字典中的key */
+
+/**
+ <#Description#>
+
+ @param originKey property的key
+ @param c <#c description#>
+ */
 - (void)setOriginKey:(id)originKey forClass:(Class)c
 {
     if ([originKey isKindOfClass:[NSString class]]) { // 字符串类型的key
