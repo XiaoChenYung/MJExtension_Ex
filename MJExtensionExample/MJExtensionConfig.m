@@ -64,7 +64,8 @@
                  @"desc" : @"desciption",
                  @"oldName" : @"name.oldName",
                  @"nowName" : @"name.newName",
-                 @"otherName" : @[@"otherName", @"name.newName", @"name.oldName"],
+                 //第一个有效的值为准
+                 @"otherName" : @[@"otherName", @"desciption",@"name.oldName", @"name.newName"],
                  @"nameChangedTime" : @"name.info[1].nameChangedTime",
                  @"bag" : @"other.bag"
                  };
