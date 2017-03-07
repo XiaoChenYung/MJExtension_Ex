@@ -55,13 +55,14 @@ static NSMutableDictionary *cachedPropertiesDict_;
 }
 
 #pragma mark - --私有方法--
-#warning mark -- 看这里
+// 替换property的key
 + (id)propertyKey:(NSString *)propertyName
 {
     MJExtensionAssertParamNotNil2(propertyName, nil);
     
     __block id key = nil;
     // 查看有没有需要替换的key
+    // 替换key 根据字典的值
     if ([self respondsToSelector:@selector(mj_replacedKeyFromPropertyName121:)]) {
         key = [self mj_replacedKeyFromPropertyName121:propertyName];
     }
