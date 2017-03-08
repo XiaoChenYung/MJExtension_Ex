@@ -29,12 +29,20 @@
 }
 
 #pragma mark - 缓存
+
+/**
+ property 做为key 获取 MJProperty
+
+ @param property <#property description#>
+ @return <#return value description#>
+ */
 + (instancetype)cachedPropertyWithProperty:(objc_property_t)property
 {
     MJProperty *propertyObj = objc_getAssociatedObject(self, property);
     if (propertyObj == nil) {
         propertyObj = [[self alloc] init];
         propertyObj.property = property;//回调用下面的set方法 运行时为类的
+        //运行时设置property为key的propertyObj 并且返回
         objc_setAssociatedObject(self, property, propertyObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return propertyObj;

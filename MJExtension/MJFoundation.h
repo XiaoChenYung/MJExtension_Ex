@@ -4,7 +4,7 @@
 //
 //  Created by MJ Lee on 14/7/16.
 //  Copyright (c) 2014年 小码哥. All rights reserved.
-//
+//  都已经了解操作
 
 #import <Foundation/Foundation.h>
 

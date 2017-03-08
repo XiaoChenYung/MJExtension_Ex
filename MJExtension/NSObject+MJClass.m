@@ -68,7 +68,7 @@ static NSMutableDictionary *ignoredCodingPropertyNamesDict_;
         
         // 4.2.获得父类
         c = class_getSuperclass(c);
-        
+        //是否是NSObject 如果是，退出循环
         if ([MJFoundation isClassFromFoundation:c]) break;
     }
 }
