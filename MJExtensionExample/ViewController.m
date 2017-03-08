@@ -42,7 +42,7 @@
     
     
     BOOL is0 = [per isMemberOfClass:[per class]];
-    BOOL is1 = [[Person class] isSubclassOfClass:[NSObject class]];
+    BOOL is1 = [[Dog class] isSubclassOfClass:[NSObject class]];
     NSLog(@"");
 //    unsigned int outCount = 0;
 //    Ivar *ivars = class_copyIvarList([Person class], &outCount);

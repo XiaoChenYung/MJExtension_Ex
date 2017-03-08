@@ -156,7 +156,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 {
     //现查找缓存
     NSMutableArray *cachedProperties = [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)];
-    
+    //只会执行一次,如果是数组，会从缓存中获取
     if (cachedProperties == nil) {
         cachedProperties = [NSMutableArray array];
         
@@ -169,7 +169,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
             // 2.遍历每一个成员变量
             for (unsigned int i = 0; i<outCount; i++) {
                 MJProperty *property = [MJProperty cachedPropertyWithProperty:properties[i]];
-                // 过滤掉Foundation框架类里面的属性
+                // 过滤掉Foundation框架类里面的属性? Why 暂时不清楚为什么
                 if ([MJFoundation isClassFromFoundation:property.srcClass]) continue;
                 property.srcClass = c;
                 [property setOriginKey:[self propertyKey:property.name] forClass:self];
@@ -184,7 +184,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)] = cachedProperties;
     }
     
-    return cachedProperties.copy;
+    return cachedProperties;
 }
 
 #pragma mark - 新值配置
