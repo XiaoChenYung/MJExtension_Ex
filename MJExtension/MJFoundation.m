@@ -37,6 +37,7 @@ static NSSet *foundationClasses_;
     if (c == [NSObject class] || c == [NSManagedObject class]) return YES;
     
     __block BOOL result = NO;
+    //判断该类是否是上述类的子类
     [[self foundationClasses] enumerateObjectsUsingBlock:^(Class foundationClass, BOOL *stop) {
         if ([c isSubclassOfClass:foundationClass]) {
             result = YES;

@@ -43,6 +43,13 @@ static NSMutableDictionary *ignoredCodingPropertyNamesDict_;
     }
 }
 
+/**
+ 遍历本类和父类递归
+
+ @param enumeration 遍历的回调
+ 
+ */
+//明白了
 + (void)mj_enumerateClasses:(MJClassesEnumeration)enumeration
 {
     // 1.没有block就直接返回
@@ -54,7 +61,7 @@ static NSMutableDictionary *ignoredCodingPropertyNamesDict_;
     // 3.当前正在遍历的类
     Class c = self;
     
-    // 4.开始遍历每一个类
+    // 4.开始遍历每一个类 递归查找父类的property
     while (c && !stop) {
         // 4.1.执行操作
         enumeration(c, &stop);

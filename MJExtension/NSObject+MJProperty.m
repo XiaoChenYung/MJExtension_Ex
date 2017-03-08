@@ -154,6 +154,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 // 首先获取一个类最外层的property
 + (NSMutableArray *)properties
 {
+    //现查找缓存
     NSMutableArray *cachedProperties = [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)];
     
     if (cachedProperties == nil) {

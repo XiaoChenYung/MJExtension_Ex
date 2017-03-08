@@ -20,6 +20,14 @@
 
 @end
 
+@interface Dog : Person
+
+@end
+
+@implementation Dog
+
+@end
+
 @interface ViewController ()
 
 @end
@@ -29,6 +37,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    Person *per = [Person new];
+    Dog *dog = [Dog new];
+    
+    
+    BOOL is0 = [per isMemberOfClass:[per class]];
+    BOOL is1 = [[Person class] isSubclassOfClass:[NSObject class]];
+    NSLog(@"");
 //    unsigned int outCount = 0;
 //    Ivar *ivars = class_copyIvarList([Person class], &outCount);
 //    
